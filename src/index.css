@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*below this will be global fonts and style*/
+@layer base {
+    html, body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        scroll-behavior: smooth;
+        background-color: #d9d9d9;
+    }
+    /*This is how to create global style in tailwind but the rest in done in the component straight*/
+    li{
+        @apply p-4 font-medium cursor-pointer;
+    }
+    h1{
+        @apply font-bold text-4xl md:text-5xl lg:text-6xl;
+    }
+
+    h2{
+        @apply font-bold text-sm md:text-3xl;
+    }
+
+    h3 {
+        @apply font-bold text-xs md:text-lg p-2 border border-violet-700 transition-all duration-700 ease-in-out hover:border-transparent rounded text-slate-200;
+    }
+}

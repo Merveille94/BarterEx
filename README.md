@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: center;"><img src="./public/ALX%20BARTERX.png" alt="banner"></div>
+<div style="display: flex; justify-content: center;"><img src="./public/ALX%20BARTERX2.jpg" alt="banner"></div>
 
 # Team members: Merveille & King
 
