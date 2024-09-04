@@ -23,7 +23,8 @@ The BarterEx architecture consists of a React-based frontend interacting with a 
 - **Deployment:** Heroku (Backend), Netlify (Frontend)
 
 **Architecture Diagram:**  
-*To be added*
+
+![Architecture_BarterEx](https://github.com/user-attachments/assets/94c0a6e4-84c9-46e6-960d-6ea6aa3888ec)
 
 ## 3. APIs and Methods
 
@@ -52,7 +53,8 @@ The BarterEx architecture consists of a React-based frontend interacting with a 
   - **Google Maps API:** For location-based search and filtering.
 
 **API Endpoint Diagram:**  
-*To be added*
+
+![API End Point](https://github.com/user-attachments/assets/cdab3712-208d-4cb1-8fd2-6270eea62c99)
 
 ## 4. Data Model
 
@@ -83,7 +85,9 @@ The BarterEx architecture consists of a React-based frontend interacting with a 
   - `timestamp: Date`
 
 **Data Model Diagram:**  
-*To be added*
+
+![Data Model](https://github.com/user-attachments/assets/054354f8-b7a0-43a4-a588-32b1824579a9)
+
 
 ## 5. User Stories
 
