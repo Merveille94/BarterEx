@@ -11,7 +11,6 @@ const MainLayout = () => {
             <ScrollToTop />
             <Navbar />
             <Outlet/>
-            <Footer />
         </>
     )
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner.jsx";
+import Footer from "./Footer.jsx";
 
 const Hero = () => {
     const [content, setContent] = useState(null); // State to store the fetched data
@@ -87,19 +88,20 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className=' bg-customGray h-1/4 w-full text-slate-100 z-0 flex items-center justify-center p-4'>
+            <div className=' bg-customGray h-auto w-full text-slate-100 z-0 flex items-center justify-center p-4'>
                 <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 grid-rows-1 p-8 gap-5'>
-                    <div className='col-span-1 row-span-1 text-center text-slate-100 bg-gray-600 md:py-4 md:px-16 py-2 px-8 rounded-tr-xl rounded-tl-xl hover:-translate-y-4 duration-500 ease-out'>
+                    <div className='col-span-1 row-span-1 text-center text-slate-100 bg-gray-600 md:py-4 md:px-auto py-2 px-8 rounded-tr-xl rounded-tl-xl hover:-translate-y-4 duration-500 ease-out'>
                         <h2><Link to={'/exchange'}>Exchange</Link></h2>
                     </div>
-                    <div className='col-span-1 row-span-1 text-center text-slate-100 bg-gray-600 md:py-4 md:px-16 py-2 px-8 rounded-tr-xl rounded-tl-xl hover:-translate-y-4 duration-700 ease-out'>
+                    <div className='col-span-1 row-span-1 text-center text-slate-100 bg-gray-600 md:py-4 md:px-auto py-2 px-8 rounded-tr-xl rounded-tl-xl hover:-translate-y-4 duration-700 ease-out'>
                         <h2><Link to={'/overview'}>Overview</Link></h2>
                     </div>
-                    <div className='col-span-1 row-span-1 text-center text-slate-100 bg-gray-600 md:py-4 md:px-16 py-2 px-8 rounded-tr-xl rounded-tl-xl hover:-translate-y-4 duration-500 ease-out'>
+                    <div className='col-span-1 row-span-1 text-center text-slate-100 bg-gray-600 md:py-4 md:px-auto py-2 px-8 rounded-tr-xl rounded-tl-xl hover:-translate-y-4 duration-500 ease-out'>
                         <h2><Link to={'/contact'}>Contacts</Link></h2>
                     </div>
                 </div>
             </div>
+            <Footer />
         </section>
     );
 };

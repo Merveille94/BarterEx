@@ -17,8 +17,8 @@ const Footer = () => {
                 const footerSection = data[0]; // Assuming the response is an array
                 setTimeout(() => { // Add 2-second delay before setting footer data
                     setFooterData(footerSection);
-                    setLoading(false); // Stop loading after 2 seconds
-                }, 2000); // 2-second delay
+                    setLoading(false); // Stop loading after 2 seconds same time as hero
+                }); // 2-second delay if we decide to
             })
             .catch(error => {
                 console.error('Error fetching the footer data:', error);
@@ -36,7 +36,7 @@ const Footer = () => {
     }
 
     return (
-        <footer className='relative h-[30%] text-slate-100 flex items-center justify-center bg-black z-50'>
+        <footer className='relative w-full h-auto text-slate-100 flex items-center justify-center bg-black z-20'>
             <div className='container mx-auto flex items-center justify-center p-2'>
                 <p className='text-xs text-center'>{footerData.description}</p>
             </div>
