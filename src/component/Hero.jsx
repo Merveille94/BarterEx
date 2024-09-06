@@ -12,7 +12,7 @@ const Hero = () => {
         // Fetch data from your API endpoint
         const fetchContent = async () => {
             try {
-                const response = await fetch('http://localhost:8000/heroSection');
+                const response = await fetch('/api/heroSection');
                 const data = await response.json();
                 setContent(data[0]); // Access the first item in the array
                 setShowcaseContent(data[1]); // Access the second item in the array

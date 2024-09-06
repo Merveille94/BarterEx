@@ -7,7 +7,7 @@ const Navbar = () => {
     const [loading, setLoading] = useState(true); // Add a loading state
 
     useEffect(() => {
-        fetch('http://localhost:8000/navbarSection')
+        fetch('/api/navbarSection')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

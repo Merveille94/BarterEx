@@ -6,7 +6,7 @@ const Footer = () => {
     const [loading, setLoading] = useState(true); // Add loading state
 
     useEffect(() => {
-        fetch('http://localhost:8000/footerSection')
+        fetch('/api/footerSection')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
