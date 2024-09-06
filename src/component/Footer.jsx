@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 const Footer = () => {
     const [footerData, setFooterData] = useState(null);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true); // Add loading state
 
     useEffect(() => {
         fetch('http://localhost:8000/footerSection')
@@ -14,20 +15,24 @@ const Footer = () => {
             })
             .then(data => {
                 const footerSection = data[0]; // Assuming the response is an array
-                setFooterData(footerSection);
+                setTimeout(() => { // Add 2-second delay before setting footer data
+                    setFooterData(footerSection);
+                    setLoading(false); // Stop loading after 2 seconds
+                }, 2000); // 2-second delay
             })
             .catch(error => {
                 console.error('Error fetching the footer data:', error);
                 setError(error.message);
+                setLoading(false); // Stop loading on error
             });
     }, []);
 
-    if (error) {
-        return <div>Error: {error}</div>;
+    if (loading) {
+        return <div>Loading Data...</div>; // Show this during the 2-second delay
     }
 
-    if (!footerData) {
-        return <div>Loading...</div>;
+    if (error) {
+        return <div>Error: {error}</div>; // Show error if any
     }
 
     return (

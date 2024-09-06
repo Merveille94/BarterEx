@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Spinner from "./Spinner.jsx";
 
 const Hero = () => {
     const [content, setContent] = useState(null); // State to store the fetched data
@@ -19,21 +20,31 @@ const Hero = () => {
                 console.log("Error fetching data", error);
                 setError(error);
             } finally {
-                setLoading(false);
+                // Simulate delay before setting loading to false
+                setTimeout(() => {
+                    setLoading(false);
+                }, 2000); // 2-second delay (2000ms)
             }
         }
         fetchContent();
     }, []); // Empty dependency array means this runs once when the component mounts
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error loading content</div>;
+    if (loading) {
+        return (
+            <div className='flex justify-center items-center h-screen'>
+                <Spinner loading={loading} />
+            </div>
+        );
+    }
+
+    if (error) return <div className='flex justify-center items-center h-screen'>Error loading content</div>;
 
     return (
         <section className='w-full h-screen relative flex flex-col items-center justify-between pt-10'>
             {/* Background Image */}
             <img className='h-full w-full absolute inset-0 bg-center bg-cover object-cover z-0'
-                alt='background image'
-                src={content.backgroundImage}
+                 alt='background image'
+                 src={content.backgroundImage}
             />
 
             {/* Content */}
