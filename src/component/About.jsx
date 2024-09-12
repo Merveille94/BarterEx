@@ -1,7 +1,6 @@
 import data from '../data.jsx';  // No need to import 'aboutSection' separately
 import Footer from "./Footer.jsx";
-import { FaHome } from "react-icons/fa";
-import {Link} from "react-router-dom";
+import Banner from "./Banner.jsx";
 
 const About = () => {
     const content = data.heroSection[0]; // Access the first item in heroSection
@@ -28,10 +27,9 @@ const About = () => {
                             </p>
                         ))}
                     </div>
-                    {/*Back icon*/}
-                    <div className='flex items-center justify-center'><Link to={'/'}><FaHome size={30}/></Link></div>
                 </div>
             </div>
+            <Banner/>
             <Footer/>
         </section>
     );
