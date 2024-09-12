@@ -11,7 +11,9 @@ const data = {
     {
       id: "2",
       showcaseImage1: "./img-1.png",
-      showcaseImage2: "./img-2.png"
+      showcaseImage2: "./img-2.png",
+      showcaseImage3: "./img-3.jpg",
+      showcaseImage4: "./img-4.jpg"
     }
   ],
   footerSection: [
@@ -31,6 +33,14 @@ const data = {
     "Welcome to BarterEx, a revolutionary platform designed to bring back the age-old practice of barter trading in a modern, digital format. Our mission is to facilitate seamless exchanges of goods and services without the need for money, empowering individuals and small businesses in Ghana to trade what they have for what they need. By leveraging technology, BarterEx aims to overcome the limitations of traditional barter systems, providing a user-friendly interface for listing, searching, and trading items efficiently and securely.",
     "BarterEx was born out of a desire to create a sustainable and inclusive trading system that benefits everyone. Founded by passionate developers as part of the ALX Software Engineering program, our platform is built on the principles of community, trust, and mutual benefit. We believe that by enabling direct exchanges, we can foster stronger connections and support local economies. Our team, led by King Kyei and Emanuele Merveille, is dedicated to continuously improving the platform to meet the evolving needs of our users.",
     "At BarterEx, we are committed to creating a vibrant marketplace where users can easily find and trade items, from everyday necessities to unique services. Our platform offers robust features such as secure user authentication, detailed item listings, and a rating system to ensure fair and transparent transactions. Join us in this exciting journey to redefine trade and build a community where everyone has something valuable to offer and receive. Together, let’s make barter trading a viable and rewarding option for all."
+  ],
+  contactsSection1: [
+      "As one of the creators of BarterEx, I’m dedicated to ensuring you have a smooth and enjoyable experience. Feel free to reach out to me with any questions or feedback.",
+      "Get in Touch: I’m here to help! Whether you have inquiries about features, need support, or just want to share your thoughts, don’t hesitate to contact me."
+  ],
+  contactsSection2: [
+      "As a co-developer of BarterEx, I’m committed to providing you with the best bartering platform. Please reach out if you have any questions or need assistance.",
+      "Get in Touch: I’m available to answer any questions you might have. Whether it’s about the app’s functionality or any other concerns, I’m here to assist you."
   ]
 };
 

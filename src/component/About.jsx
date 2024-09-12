@@ -20,8 +20,7 @@ const About = () => {
 
             <div className='container mx-auto relative z-5 p-6 text-slate-300 flex flex-col justify-center items-center my-auto'>
                 {/* About Section */}
-                <div
-                    className='flex flex-col items-center justify-center bg-backgroundGray md:py-4 md:px-auto py-2 px-4 rounded-xl'>
+                <div className='flex flex-col items-center justify-center bg-backgroundGray/80 md:py-4 md:px-auto py-2 px-4 rounded-xl'>
                     <h2 className='flex items-center justify-center bg-customGray text-black md:px-auto py-2 px-10 rounded-xl'>About</h2>
 
                     {/* About Section Text */}
