@@ -41,6 +41,18 @@ const data = {
   contactsSection2: [
       "As a co-developer of BarterEx, I’m committed to providing you with the best bartering platform. Please reach out if you have any questions or need assistance.",
       "Get in Touch: I’m available to answer any questions you might have. Whether it’s about the app’s functionality or any other concerns, I’m here to assist you."
+  ],
+  SocialMedia : [
+    {
+      id:"1",
+      link1: "https://github.com/Merveille94",
+      link2: "https://www.linkedin.com/in/emanuelemerveille/",
+      link3: "emanueleguehi@gmail.com",
+      link4: "https://github.com/Oyiad23",
+      link5: "https://www.linkedin.com/in/king-boakye-kyei-091a42131/",
+      link6: "heavenonearth.boakye11@gmail.com"
+    }
+
   ]
 };
 
