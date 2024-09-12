@@ -1,44 +1,12 @@
-import { useEffect, useState } from 'react';
+import data from "../data.jsx"; // Import the data
 
 const Footer = () => {
-    const [footerData, setFooterData] = useState(null);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true); // Add loading state
-
-    useEffect(() => {
-        fetch('/api/footerSection')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                const footerSection = data[0]; // Assuming the response is an array
-                setTimeout(() => { // Add 2-second delay before setting footer data
-                    setFooterData(footerSection);
-                    setLoading(false); // Stop loading after 2 seconds same time as hero
-                }); // 2-second delay if we decide to
-            })
-            .catch(error => {
-                console.error('Error fetching the footer data:', error);
-                setError(error.message);
-                setLoading(false); // Stop loading on error
-            });
-    }, []);
-
-    if (loading) {
-        return <div>Loading Data...</div>; // Show this during the 2-second delay
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>; // Show error if any
-    }
+    const footerData = data.footerSection[0]; // Access the first item in the footerSection
 
     return (
-        <footer className='relative w-full h-auto text-slate-100 flex items-center justify-center bg-black z-20'>
-            <div className='container mx-auto flex items-center justify-center p-2'>
-                <p className='text-xs text-center'>{footerData.description}</p>
+        <footer className="relative w-full h-auto text-slate-100 flex items-center justify-center bg-black z-20">
+            <div className="container mx-auto flex items-center justify-center p-2">
+                <p className="text-xs text-center">{footerData.description}</p>
             </div>
         </footer>
     );
