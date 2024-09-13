@@ -24,7 +24,7 @@ const About = () => {
                     <h2 className='flex items-center justify-center bg-customGray text-black md:px-auto py-2 px-10 rounded-xl'>About</h2>
 
                     {/* About Section Text */}
-                    <div className={`p-4 mx-auto ${showFullText ? '' : 'max-h-96 md:max-h-svh overflow-hidden'}`} style={{lineHeight: '1.75'}}>
+                    <div className={`p-2 mx-auto ${showFullText ? '' : 'max-h-96 md:max-h-svh overflow-hidden'}`} style={{lineHeight: '1.75'}}>
                         {aboutContent.map((paragraph, index) => (
                             <p key={index} className="my-4 text-justify text-slate-200" >
                                 {paragraph}
