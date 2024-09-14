@@ -19,9 +19,7 @@ const Instructions = () => {
                     {/* Instruction Section */}
                     {instructions.map((instruction, index) => (
                         // Alternate layout for each div
-                        <div key={index}
-                             className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-2 mt-2 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-                        >
+                        <div key={index} className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-2 mt-2 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                             {/* Image div */}
                             <div className="md:w-1/2">
                                 <img src={instruction[`image${index + 1}`]}
@@ -30,8 +28,8 @@ const Instructions = () => {
                                 />
                             </div>
 
-                            {/* Step div */}
-                            <div className="md:w-1/2 p-2">
+                            {/* Steps div */}
+                            <div className="md:w-1/2 pr-4">
                                 <h2 className="text-sm lg:text-xl font-bold">Step {index + 1}</h2>
                                 <p className="text-sm lg:text-lg text-justify">{instruction[`step${index + 1}`]}</p>
                             </div>
