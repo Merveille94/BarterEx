@@ -15,7 +15,7 @@ export const getItems = async (req, res) => {
 // Create an item (for user dashboard)
 export const createItem = async (req, res) => {
     const { name, image, number, description, category } = req.body;
-    const userId = req.user.id; // Assuming user is logged in and their id is available
+    const userId = req.user.id; // User is logged in and their id is available
 
     if (!name || !image || !number || !description || !category) {
         return res
