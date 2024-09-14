@@ -10,8 +10,7 @@ const Hero = () => {
     return (
         <section className="w-full h-screen relative flex flex-col items-center justify-between pt-10">
             {/* Background Image */}
-            <img
-                className="h-full w-full absolute inset-0 bg-center bg-cover object-cover z-0"
+            <img className="h-full w-full absolute inset-0 bg-center bg-cover object-cover z-0"
                 alt="background image"
                 src={content.backgroundImage}
             />

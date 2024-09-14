@@ -10,11 +10,13 @@ import LandingPage from "./pages/LandingPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import InstructionPage from "./pages/InstructionPage.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<MainLayout/>}>
             <Route index element={<LandingPage/>}/>
+            <Route path='/instructions' element={<InstructionPage/>}/>
             <Route path='/about' element={<AboutPage/>}/>
             <Route path='/contact' element={<ContactPage/>}/>
             <Route path='*' element={<NotFoundPage/>}/>
