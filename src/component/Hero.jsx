@@ -25,7 +25,7 @@ const Hero = () => {
                             <p className="text-purple-900 md:text-black text-lg md:text-xl mt-2 max-w-lg">
                                 {content.description}
                             </p>
-                            <Link to={'/overview'}><h2 className='flex items-center justify-center bg-gray-600 hover:bg-gray-800 hover:text-slate-200 text-slate-100 md:px-auto py-2 px-10 rounded-xl mt-4'>
+                            <Link to={'/create'}><h2 className='flex items-center justify-center bg-gray-600 hover:bg-gray-800 hover:text-slate-200 text-slate-100 md:px-auto py-2 px-10 rounded-xl mt-4'>
                                 Get Started !</h2></Link>
                         </div>
                     </div>
