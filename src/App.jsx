@@ -13,19 +13,26 @@ import ContactPage from "./pages/ContactPage.jsx";
 import InstructionPage from "./pages/InstructionPage.jsx";
 import ProductSectionPage from "./pages/ProductSectionPage.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
+import SignInPage from "./pages/SignInPage.jsx";
+import AlternateLayout from "./layout/AlternateLayout.jsx";
 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<MainLayout/>}>
-            <Route index element={<LandingPage/>}/>
-            <Route path='/AddProduct' element={<CreatePage/>}/>
-            <Route path='/create' element={<ProductSectionPage/>}/>
-            <Route path='/instructions' element={<InstructionPage/>}/>
-            <Route path='/about' element={<AboutPage/>}/>
-            <Route path='/contact' element={<ContactPage/>}/>
+        <>
+            <Route path="/" element={<MainLayout/>}>
+                <Route index element={<LandingPage/>}/>
+                <Route path="/signup" element={<SignInPage/>}/>
+                <Route path='/instructions' element={<InstructionPage/>}/>
+                <Route path='/about' element={<AboutPage/>}/>
+                <Route path='/contact' element={<ContactPage/>}/>
+            </Route>
+            <Route path='/' element={<AlternateLayout/>}>
+                <Route path='/AddProduct' element={<CreatePage/>}/>
+                <Route path='/create' element={<ProductSectionPage/>}/>
+            </Route>
             <Route path='*' element={<NotFoundPage/>}/>
-        </Route>
+        </>
     )
 );
 
