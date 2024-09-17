@@ -29,7 +29,7 @@ const router = createBrowserRouter(
             </Route>
             <Route path='/' element={<AlternateLayout/>}>
                 <Route path='/AddProduct' element={<CreatePage/>}/>
-                <Route path='/create' element={<ProductSectionPage/>}/>
+                <Route path='/dashboard' element={<ProductSectionPage/>}/>
             </Route>
             <Route path='*' element={<NotFoundPage/>}/>
         </>

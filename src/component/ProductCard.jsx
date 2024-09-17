@@ -42,7 +42,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="border-1 border-slate-700 bg-slate-600 rounded-lg overflow-hidden hover:-translate-y-2 duration-500 ease-in-out w-full">
+    <div className="border-1 border-slate-700 bg-backgroundGray rounded-lg overflow-hidden hover:-translate-y-2 duration-500 ease-in-out w-full">
       {/* Product Image */}
       <img
         src={product.image}
@@ -52,8 +52,8 @@ const ProductCard = ({ product }) => {
 
       {/* Product Name and Amount */}
       <div className="p-4">
-        <h3 className="text-white text-lg font-bold">{product.name}</h3>
-        <p className="text-gray-300 text-lg">{product.price}</p>
+        <h4 className="text-white">Name: {product.name}</h4>
+        <p className="text-gray-300">Number of Items: {product.price}</p>
         
         {/* Edit and Delete Icons */}
         <div className="flex items-center space-x-4 mt-4">
@@ -75,14 +75,14 @@ const ProductCard = ({ product }) => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         contentLabel="Update Product"
-        className="w-96 p-8 bg-gray-800 rounded-md mx-auto my-20"
+        className="w-96 p-8 bg-customGray/80 rounded-xl mx-auto my-20"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50"
       >
-        <h2 className="text-xl text-white font-bold mb-4">Update Product</h2>
+        <h2 className="text-xl text-black uppercase font-bold mb-4">Update Product</h2>
         <div className="space-y-4">
           <input
             type="text"
-            className="w-full p-2 rounded-md bg-gray-700 text-white"
+            className="w-full bg-black text-slate-300 rounded-xl p-2"
             placeholder="Product Name"
             value={updatedProduct.name}
             onChange={(e) =>
@@ -91,7 +91,7 @@ const ProductCard = ({ product }) => {
           />
           <input
             type="number"
-            className="w-full p-2 rounded-md bg-gray-700 text-white"
+            className="w-full bg-black text-slate-300 rounded-xl p-2"
             placeholder="Product Amount"
             value={updatedProduct.price}
             onChange={(e) =>
@@ -100,7 +100,7 @@ const ProductCard = ({ product }) => {
           />
           <input
             type="text"
-            className="w-full p-2 rounded-md bg-gray-700 text-white"
+            className="w-full bg-black text-slate-300 rounded-xl p-2"
             placeholder="Image URL"
             value={updatedProduct.image}
             onChange={(e) =>
@@ -112,13 +112,13 @@ const ProductCard = ({ product }) => {
         {/* Modal Actions */}
         <div className="flex justify-end space-x-4 mt-6">
           <button
-            className="px-4 py-2 bg-blue-600 text-white rounded-md"
+            className="px-4 py-2 bg-gray-700  hover:bg-black text-white rounded-md"
             onClick={() => handleUpdateProduct(product._id)}
           >
             Update
           </button>
           <button
-            className="px-4 py-2 bg-gray-500 text-white rounded-md"
+            className="px-4 py-2 hover:bg-black bg-gray-700 text-red-400 hover:text-white rounded-md"
             onClick={closeModal}
           >
             Cancel

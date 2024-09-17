@@ -49,7 +49,7 @@ const SignIn = () => {
                                     className='bg-black text-slate-300 rounded-xl p-2'
                                 />
                             </div>
-                            <Link to="/create">
+                            <Link to="/dashboard">
                                 <button type="button" className='p-2 border-stone-900 border-2 px-4 hover:bg-backgroundGray rounded-xl'>Sign In</button>
                             </Link>
                         </form>

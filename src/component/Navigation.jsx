@@ -13,7 +13,7 @@ const Navbar = () => {
                     <div className='text-lg font-bold'>
                         <Link to={'/'} >{navbarData.logo}</Link>
                     </div>
-                    <div className='ml-auto flex items-center justify-between'>
+                    <div className='ml-auto flex items-center justify-between text-slate-100'>
                         <BsPersonCircle size={30} className='mr-4'/>
                         <VscBellDot size={30}/>
                     </div>
