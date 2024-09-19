@@ -1,181 +1,147 @@
 <div style="display: flex; justify-content: center;"><img src="./public/ALX%20BARTERX2.jpg" alt="banner"></div>
 
-# Team members: Merveille & King
+# BarterEx: A Barter Trading System for People Living in Ghana
 
-# BarterEx
+BarterEx is a platform designed to streamline the traditional barter trade system by offering a digital solution. It allows users to list, search for, and trade goods and services easily without involving cash. The app focuses on providing a user-friendly and intuitive interface while ensuring secure and efficient transactions.
 
-## 1. Project Overview
+## Team Members
 
-**Project Name:** BarterEx  
-**Team Member(s):** King Kyei Boakye, Emanuele Merveille Guehi  
-**Objective:**  
-BarterEx is a digital platform designed to facilitate barter trading among individuals and small businesses in Ghana. The platform aims to overcome traditional barter trade limitations by providing a user-friendly interface for listing, searching, and trading goods and services without money.
+- **King Kyei Boakye** (Founder & Backend Developer)  
+- **Emanuele Merveille Guehi** (Front-end Developer)
 
-![B](https://github.com/user-attachments/assets/74ceeaf2-8665-48f7-b204-423bd164fe9c)
+### Team Responsibilities:
 
-## 2. Architecture
+- **Emanuele Merveille Guehi (Front-end Developer)**
+  - Frontend Development: Creating a responsive and user-friendly interface using React/Next.js, Vite, and Tailwind CSS.
+  - Backend Development: Assisting with database management, authentication, and implementing backend logic using Node.js.
+  - API Integration: Developing APIs using Node.js to connect the front end with MongoDB and other services.
+  - Design: Participating in design elements using Figma and Adobe XD.
+  - Testing & QA: Conducting unit testing with Jest and end-to-end testing with Cypress.
+  - Content Management: Managing the initial data population in MongoDB, handling content updates, and verification.
 
-**Architecture Overview:**  
-The BarterEx architecture consists of a React-based frontend interacting with a Node.js backend server via RESTful APIs. The backend server uses MongoDB for data storage, and the application will be deployed on cloud platforms (Heroku for the backend and Netlify for the frontend).
+---
 
-**Components:**  
-- **Frontend:** React, React Router, Axios  
-- **Backend:** Express.js, Mongoose, bcryptjs, jsonwebtoken  
-- **Database:** MongoDB  
-- **Deployment:** Heroku (Backend), Netlify (Frontend)
+## Project Inspiration
 
-**Architecture Diagram:**  
+BarterEx was born out of the need to modernize the barter trade system, especially in regions like Ghana where traditional bartering is still common. The goal was to create a seamless and digital solution to make trading more accessible and organized for individuals and small businesses.  
 
-![Architecture_BarterEx](https://github.com/user-attachments/assets/94c0a6e4-84c9-46e6-960d-6ea6aa3888ec)
+Our biggest challenge was figuring out how to make the app both functional and visually appealing, while ensuring security and scalability. Through trial and error, especially with API integration and handling real-time updates, we learned valuable lessons that made our app better.
 
-## 3. APIs and Methods
+## Technologies Used
 
-**API Endpoints:**
+- **Frontend**: React, Next.js, Vite, Tailwind CSS
+- **Backend**: Node.js, Express.js, MongoDB
+- **Testing**: Jest, Cypress, Mocha
+- **Authentication**: bcryptjs, jsonwebtoken
+- **API Calls**: Axios
 
-- **User Authentication**
-  - **POST /API/auth/register:** Registers a new user with username, email, and password.
-  - **POST /API/auth/login:** Authenticates a user and returns a JWT token.
-  - **GET /API/auth/me:** Retrieves the authenticated user's details using the JWT token.
+### Tools and Resources
 
-- **Item Listings**
-  - **GET /API/items:** Retrieves a list of all available items for trade.
-  - **POST /API/items:** Adds a new item to the user's trade list.
-  - **GET /API/items/:id:** Retrieves details of a specific item.
-  - **DELETE /API/items/:id:** Deletes an item from the user's trade list.
+- **Design**: Figma, Adobe XD
+- **Deployment**: Netlify (Frontend), Heroku (Backend)
+- **Version Control**: GitHub
 
-- **User Profiles**
-  - **GET /API/users/:id:** Retrieves a user's profile and their listed items.
-  - **PUT /API/users/:id:** Updates the user's profile information.
+## Installation
 
-- **Messaging System**
-  - **POST /API/messages:** Sends a message between users regarding a trade.
-  - **GET /API/messages:** Retrieves the user's message history.
+1. Clone the repository:
 
-- **3rd Party APIs:**
-  - **Google Maps API:** For location-based search and filtering.
+   ```bash
+   git clone https://github.com/yourusername/BarterEx.git
+   cd BarterEx
+   ```
 
-**API Endpoint Diagram:**  
+2. Navigate to the backend folder and install dependencies:
 
-![API End Point](https://github.com/user-attachments/assets/cdab3712-208d-4cb1-8fd2-6270eea62c99)
+   ```bash
+   cd backend
+   npm install
+   ```
 
-## 4. Data Model
+3. Setup environment variables in the `.env` file:
 
-**Data Model Diagram:**
+   ```bash
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   ```
 
-- **User:**
-  - `_id: ObjectId`
-  - `username: String`
-  - `email: String`
-  - `password: String`
-  - `items: [ObjectId]` (References to Item)
-  - `messages: [ObjectId]` (References to Message)
+4. Start the backend:
 
-- **Item:**
-  - `_id: ObjectId`
-  - `name: String`
-  - `description: String`
-  - `category: String`
-  - `image: String`
-  - `userId: ObjectId` (Reference to User)
-  - `createdAt: Date`
+   ```bash
+   npm run dev
+   ```
 
-- **Message:**
-  - `_id: ObjectId`
-  - `Sender Id: ObjectId` (Reference to User)
-  - `Receiver Id: ObjectId` (Reference to User)
-  - `content: String`
-  - `timestamp: Date`
+5. Navigate to the frontend folder and install dependencies:
 
-**Data Model Diagram:**  
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-![Data Model](https://github.com/user-attachments/assets/054354f8-b7a0-43a4-a588-32b1824579a9)
+6. Start the frontend:
 
+   ```bash
+   npm run dev
+   ```
 
-## 5. User Stories
+## Features
 
-- As a user, I want to register and create a profile to list items I want to trade.
-- As a user, I want to search for items by category and location so that I can find items of interest near me.
-- As a user, I want to view detailed information about an item, including images and descriptions, so that I can decide if I want to trade for it.
-- As a user, I want to send and receive messages with other users to negotiate trades.
-- As a user, I want to manage my listed items, including adding new items, editing details, and deleting items I no longer wish to trade.
+- **User Registration & Authentication**: Secure registration and login with JWT authentication.
+- **Item Listings**: Users can list items they want to trade, with photos, descriptions, and categories.
+- **Search & Filters**: Advanced search functionality to help users find the exact items they need.
+- **Messaging**: Integrated messaging system for negotiating trades between users.
+- **Ratings & Reviews**: Users can leave feedback after a successful trade.
+- **Notifications**: Real-time notifications for trade offers, messages, and updates.
 
-## 6. Mockups
+---
 
-**Login Page:**
-- **Fields:** Email, Password
-- **Buttons:** Login, Sign Up
+## Usage
 
-**User Dashboard:**
-- **Sections:** My Items, Messages, Account Settings
+1. **Create an Item**: Navigate to the "Create Item" page, fill in the details, and submit.
+2. **Search & Trade**: Use filters to search for items, initiate trades, and communicate with other users.
+3. **Manage Your Profile**: View your listed items, edit or delete them, and update your profile.
 
-**Item Listing Page:**
-- **Features:** Item Image, Name, Description, Trade Button
+---
 
-**Messaging Interface:**
-- **Features:** List of Messages, Conversation View, Reply Box
+## Screenshots
 
-**Tools:**  
-- Figma/Illustrator for mock-up design  
-- Adobe XD for UI/UX design
+<img src="./public/img-i4.png" alt="banner">
+<img src="./public/img-i3.png" alt="banner">
 
-## 7. Testing
+---
 
-**Testing Strategy:**
+## Contributing
 
-- **Unit Testing:**
-  - **Tools:** Jest, Mocha
-  - **Focus:** API endpoints, user authentication, and data validation.
+We welcome contributions! Here's how you can get started:
 
-- **Integration Testing:**
-  - **Tools:** Postman
-  - **Focus:** API integration, and database interactions.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add a new feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
 
-- **End-to-End Testing:**
-  - **Tools:** Cypress
-  - **Focus:** User flows like registration, item listing, and trading.
+---
 
-**Continuous Integration:**
-- **Tools:** GitHub Actions
-- Automate testing and deployment processes with CI/CD pipelines.
+## Challenges & Lessons Learned
 
-## 8. Deployment Strategy
+**Technical Challenges**  
+- Integrating the authentication system was initially challenging as we had to ensure the security of user data while keeping the system scalable.
+- Real-time updates between the frontend and backend using WebSockets were tricky to implement but greatly improved the user experience for messaging and notifications.
 
-**Branching and Merging:**
+**What’s Next?**  
+- In the next iteration, we plan to integrate a location-based feature that helps users find trades near their location using GPS. We also aim to implement a mobile version of the app using React Native.
 
-- **GitHub Flow:**
-  - Feature branches for each new feature or fix.
-  - Pull requests for code review and merging into the main branch.
+---
 
-**Deployment:**
+## Related Projects
 
-- **Staging Environment:**
-  - Deploy to a staging environment for testing before production.
+- **Craigslist (Barter Section)**: A similar platform but with limited features for barter-specific trading.
+- **Bunz**: A community-based barter app with a focus on social features.
 
-- **Production Deployment:**
-  - Use Heroku and Netlify to deploy the backend and frontend seamlessly.
+---
 
-**Rollback Plan:**
-- Implement a rollback strategy to revert to the last stable version in case of deployment failure.
+## License
 
-## 9. Post-Launch Plan
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+```
 
-**Post-Launch Activities:**
-
-- **User Feedback:** Gather and analyze user feedback for continuous improvement.
-- **Regular Updates:** Fix bugs, add features, and improve performance based on user feedback and testing.
-- **Marketing Strategy:** Promote the app through social media, influencers, and local partnerships.
-
-## 10. Team Members
-
-- **Current Team:** King Kyei Boakye  
-- **Current Team:** Emanuele Merveille Guehi  
-- **Future Plans:** Aim to expand the team with an additional developer and designer.
-
-## 11. Status and Progress
-
-- Creation of wireframing and the various pages starting with the Sign-in / sign-up.
-- Creation of the GitHub repo.
-- Initialization of the React and Tailwind development environment.
-- **Progress Rating:** 6/10  
-  This MVP specification outlines the necessary steps to develop, test, and deploy BarterEx, ensuring a strong foundation for future growth and iterations.
 
