@@ -21,6 +21,16 @@ BarterEx is a platform designed to streamline the traditional barter trade syste
 
 ---
 
+### Team Responsibilities:
+
+- **King Kyei Boakye (Back-end Developer)**
+  - Backend Development: Assisting with database management, authentication, and implementing backend logic using Node.js.
+  - API Integration: Developing APIs using Node.js to connect the front end with MongoDB and other services.
+  - Testing & QA: Conducting unit testing with Jest and end-to-end testing with Cypress.
+  - Content Management: Managing the initial data population in MongoDB, handling content updates, and verification.
+
+---
+
 ## Project Inspiration
 
 BarterEx was born out of the need to modernize the barter trade system, especially in regions like Ghana where traditional bartering is still common. The goal was to create a seamless and digital solution to make trading more accessible and organized for individuals and small businesses.  
