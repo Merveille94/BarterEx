@@ -2,7 +2,7 @@
 
 # BarterEx: A Barter Trading System for People Living in Ghana
 
-BarterEx is a platform designed to streamline the traditional barter trade system by offering a digital solution. It allows users to list, search for, and trade goods and services easily without involving cash. The app focuses on providing a user-friendly and intuitive interface while ensuring secure and efficient transaction.
+BarterEx is a platform designed to streamline the traditional barter trade system by offering a digital solution. It allows users to list, search for, and trade goods and services easily without involving cash. The app focuses on providing a user-friendly and intuitive interface while ensuring secure and efficient transactions.
 
 ## Team Members
 
